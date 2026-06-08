@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Virendra Bagul - IT Student & Developer Portfolio. Showcasing projects in Web Development, Python, DevOps, and more.">
+    <title>Virendra Bagul | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Typed.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">VB</div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Up Button -->
+    <div class="scroll-up-btn" id="scrollUpBtn" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">V</span><span class="logo-accent">Bagul</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#terminal" class="nav-link">Terminal CLI</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HOME SECTION ========== -->
+    <section class="home" id="home">
+        <div class="home-container">
+            <div class="home-text" data-aos="fade-right" data-aos-duration="1000">
+                <div class="greeting">👋 Hello, I'm</div>
+                <h1 class="hero-name">Virendra<br><span class="name-accent">Bagul</span></h1>
+                <div class="hero-role">
+                    <span class="typing-text" id="typingText"></span>
+                </div>
+                <p class="hero-desc">Building scalable, automated, secure, and cloud-native infrastructure solutions.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        <i class="fas fa-server"></i> View Infrastructure
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/virendra-bagul-141786250" target="_blank" class="social-chip"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/BagulVirendra07" target="_blank" class="social-chip" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="mailto:virendrabagul7@gmail.com" class="social-chip" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="home-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <img src="img/viren pic for portfolio.png" alt="Virendra Bagul" class="profile-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class="fab fa-aws"></i> AWS Cloud
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fab fa-linux"></i> Linux Admin
+                </div>
+                <div class="floating-badge badge-3">
+                    <i class="fas fa-server"></i> DevOps Engineer
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About <span class="title-accent">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrap" data-aos="fade-right" data-aos-duration="900">
+                    <div class="about-img-frame">
+                        <img src="img/viren pic for portfolio.png" alt="Virendra Bagul" class="about-img"
+                            onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#667eea,#764ba2)'; this.style.display='none';">
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="1" data-noplus>0</span>
+                            <span class="stat-label">DevOps Internships</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                    <h3 class="about-heading">I'm Virendra & I'm a <span class="typing-about"></span></h3>
+                    <p class="about-text">
+                        I am a passionate IT graduate focused on DevOps, Cloud Computing, and Linux Administration. I have hands-on experience with AWS cloud services, Linux system administration, infrastructure automation, containerization, configuration management, and CI/CD practices.
+                    </p>
+                    <p class="about-text">
+                        I enjoy designing reliable, scalable, and secure cloud environments while continuously learning modern DevOps tools and technologies. My goal is to contribute to organizations by automating infrastructure, improving deployment processes, and building resilient cloud solutions.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">🤖 DevOps Engg.</span>
+                        <span class="tag">☁️ AWS Cloud</span>
+                        <span class="tag">🐧 Linux Admin</span>
+                        <span class="tag">⚙️ Ansible & Terraform</span>
+                        <span class="tag">🚀 CI/CD Pipelines</span>
+                        <span class="tag">📦 Docker & Kubernetes</span>
+                        <span class="tag">🐍 Python & Bash</span>
+                    </div>
+                    <a href="Virendra_Bagul_DevOps_Resume.pdf" id="downloadCvBtn" class="btn btn-primary download-btn" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION SECTION ========== -->
+    <section class="education" id="education">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education <span class="title-accent">Timeline</span></h2>
+            </div>
+
+            <div class="edu-grid">
+
+                <!-- B.Tech -->
+                <div class="edu-grid-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="egc-img-wrap">
+                        <img src="img/SVKM clg. pic.jpeg" alt="SVKM Institute" class="egc-img" style="object-position: center 30%;" onerror="this.closest('.egc-img-wrap').style.display='none'">
+                        <div class="egc-img-fade"></div>
+                        <div class="egc-dot egc-dot-purple"><i class="fas fa-graduation-cap"></i></div>
+                    </div>
+                    <div class="egc-body">
+                        <span class="egc-year">2022 – 2026</span>
+                        <h3>B.Tech — IT</h3>
+                        <h4><i class="fas fa-map-marker-alt"></i> SVKM Institute of Technology, Dhule</h4>
+                        <div class="egc-chips">
+                            <span>Cloud</span>
+                            <span>DevOps</span>
+                            <span>Networking</span>
+                            <span class="chip-green">CGPA: 7.57</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HSC -->
+                <div class="edu-grid-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="egc-img-wrap">
+                        <img src="img/samata 1.1.png" alt="Samata Vidyalaya" class="egc-img" style="object-position: center 20%;" onerror="this.closest('.egc-img-wrap').style.display='none'">
+                        <div class="egc-img-fade"></div>
+                        <div class="egc-dot egc-dot-pink"><i class="fas fa-school"></i></div>
+                    </div>
+                    <div class="egc-body">
+                        <span class="egc-year egc-year-pink">2020 – 2022</span>
+                        <h3>HSC — Science</h3>
+                        <h4><i class="fas fa-map-marker-alt"></i> Samata Vidyalaya &amp; Jr. College, Tehare</h4>
+                        <div class="egc-chips">
+                            <span>Science Stream</span>
+                            <span>Mathematics</span>
+                            <span class="chip-green">84.85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SSC -->
+                <div class="edu-grid-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="egc-img-wrap">
+                        <img src="img/KBH.jpg" alt="KBH Vidyalaya" class="egc-img" style="object-position: center 25%;" onerror="this.closest('.egc-img-wrap').style.display='none'">
+                        <div class="egc-img-fade"></div>
+                        <div class="egc-dot egc-dot-cyan"><i class="fas fa-book-open"></i></div>
+                    </div>
+                    <div class="egc-body">
+                        <span class="egc-year egc-year-cyan">Until 2020</span>
+                        <h3>SSC — Secondary</h3>
+                        <h4><i class="fas fa-map-marker-alt"></i> K.B.H. Vidyalaya, Malegaon Camp</h4>
+                        <div class="egc-chips">
+                            <span>Passed: 2020</span>
+                            <span class="chip-green">92.60%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Technical <span class="title-accent">Skills</span></h2>
+            </div>
+            <div class="skills-devops-grid">
+                <!-- Card 1: Cloud Platforms -->
+                <div class="skills-category-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="category-header">
+                        <i class="fab fa-aws category-icon" style="color: #ff9900;"></i>
+                        <h3>Cloud Platforms</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>AWS:</strong> EC2, S3, IAM, VPC, EBS, CloudWatch, Route 53, ALB/ELB, Auto Scaling</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Microsoft Azure:</strong> VMs, Storage Accounts, VNet</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Google Cloud:</strong> Compute Engine, Cloud Storage, VPC</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: DevOps & CI/CD -->
+                <div class="skills-category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-tools category-icon" style="color: #a855f7;"></i>
+                        <h3>DevOps & CI/CD</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> Docker</li>
+                        <li><i class="fas fa-check-circle"></i> Kubernetes</li>
+                        <li><i class="fas fa-check-circle"></i> Terraform</li>
+                        <li><i class="fas fa-check-circle"></i> Ansible</li>
+                        <li><i class="fas fa-check-circle"></i> Jenkins</li>
+                        <li><i class="fas fa-check-circle"></i> Git & GitHub</li>
+                        <li><i class="fas fa-check-circle"></i> CI/CD Pipelines</li>
+                        <li><i class="fas fa-check-circle"></i> Infrastructure as Code (IaC)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Operating Systems -->
+                <div class="skills-category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fab fa-linux category-icon" style="color: #ec4899;"></i>
+                        <h3>Operating Systems</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> Linux Administration</li>
+                        <li><i class="fas fa-check-circle"></i> Ubuntu Server</li>
+                        <li><i class="fas fa-check-circle"></i> Amazon Linux</li>
+                        <li><i class="fas fa-check-circle"></i> Red Hat Enterprise Linux (RHEL)</li>
+                        <li><i class="fas fa-check-circle"></i> CentOS</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Networking & Infrastructure -->
+                <div class="skills-category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <i class="fas fa-network-wired category-icon" style="color: #06b6d4;"></i>
+                        <h3>Networking & Infrastructure</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> TCP/IP Networking</li>
+                        <li><i class="fas fa-check-circle"></i> DNS</li>
+                        <li><i class="fas fa-check-circle"></i> SSH</li>
+                        <li><i class="fas fa-check-circle"></i> HTTP/HTTPS</li>
+                        <li><i class="fas fa-check-circle"></i> VPC Networking</li>
+                        <li><i class="fas fa-check-circle"></i> Security Groups & NACLs</li>
+                        <li><i class="fas fa-check-circle"></i> Load Balancing (ALB/ELB)</li>
+                        <li><i class="fas fa-check-circle"></i> Subnets, Route Tables</li>
+                        <li><i class="fas fa-check-circle"></i> NAT Gateway & Internet Gateway</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: Monitoring & Logging -->
+                <div class="skills-category-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <i class="fas fa-chart-line category-icon" style="color: #10b981;"></i>
+                        <h3>Monitoring & Logging</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> AWS CloudWatch</li>
+                        <li><i class="fas fa-check-circle"></i> System Monitoring</li>
+                        <li><i class="fas fa-check-circle"></i> Log Monitoring</li>
+                        <li><i class="fas fa-check-circle"></i> Alerting & Metrics</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6: Scripting & Programming -->
+                <div class="skills-category-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-header">
+                        <i class="fab fa-python category-icon" style="color: #4ecdc4;"></i>
+                        <h3>Scripting & Programming</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> Python</li>
+                        <li><i class="fas fa-check-circle"></i> Bash Scripting</li>
+                        <li><i class="fas fa-check-circle"></i> Shell Scripting</li>
+                        <li><i class="fas fa-check-circle"></i> C</li>
+                        <li><i class="fas fa-check-circle"></i> C++</li>
+                    </ul>
+                </div>
+
+                <!-- Card 7: Concepts -->
+                <div class="skills-category-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="category-header">
+                        <i class="fas fa-brain category-icon" style="color: #f59e0b;"></i>
+                        <h3>Concepts</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> Infrastructure Automation</li>
+                        <li><i class="fas fa-check-circle"></i> Configuration Management</li>
+                        <li><i class="fas fa-check-circle"></i> Disaster Recovery</li>
+                        <li><i class="fas fa-check-circle"></i> Version Control</li>
+                        <li><i class="fas fa-check-circle"></i> Linux Troubleshooting</li>
+                        <li><i class="fas fa-check-circle"></i> Server Administration</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">What I Built</span>
+                <h2 class="section-title">My <span class="title-accent">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- 1. AWS Backup and Disaster Recovery System -->
+                <div class="project-card featured" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">
+                    <div class="project-image">
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #ff9900 0%, #ff5500 100%);">
+                            <i class="fab fa-aws" style="color: #fff; font-size: 4rem;"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/BagulVirendra07/aws-ebs-snapshot-disaster-recovery" target="_blank" class="project-link-btn">
+                                <i class="fab fa-github"></i> View Repo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>AWS EC2</span><span>AWS EBS</span><span>Snapshots</span><span>Disaster Recovery</span>
+                        </div>
+                        <h3>AWS Backup & Disaster Recovery <span class="featured-badge">⭐ Top Project</span></h3>
+                        <p>Implemented an enterprise-grade backup & recovery solution on AWS using EBS Snapshots. Configured volumes, simulated data loss, automated snapshots, and performed seamless volume restoration to guarantee business continuity.</p>
+                        <ul class="project-bullets" style="padding-left: 16px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px; list-style-type: disc;">
+                            <li>Created & managed EBS volumes on AWS.</li>
+                            <li>Generated snapshot backups of application data.</li>
+                            <li>Simulated data loss & restored volumes from snapshots.</li>
+                        </ul>
+                        <a href="https://github.com/BagulVirendra07/aws-ebs-snapshot-disaster-recovery" target="_blank" class="project-github-link">
+                            <i class="fab fa-github"></i> GitHub Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Ansible User Management Role -->
+                <div class="project-card featured" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="project-image">
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #000000 0%, #2f2f2f 100%); border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <i class="fas fa-terminal" style="color: #fff; font-size: 3.5rem;"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/BagulVirendra07/Infrastructure-User-Provisioning-with-Ansible" target="_blank" class="project-link-btn">
+                                <i class="fab fa-github"></i> View Role
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Ansible</span><span>Automation</span><span>Linux EC2</span><span>IAM/SSH</span>
+                        </div>
+                        <h3>Infrastructure-User-Provisioning-with-Ansible <span class="featured-badge" style="background: rgba(168,85,247,0.15); border-color: rgba(168,85,247,0.3); color: #c084fc;">🚀 Automation</span></h3>
+                        <p>Automated user administration and group privilege management on Amazon Linux EC2 instances. Engineered an Ansible role configuration to eliminate manual overhead, restrict SSH parameters, and enforce consistent access policy controls.</p>
+                        <ul class="project-bullets" style="padding-left: 16px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px; list-style-type: disc;">
+                            <li>Automated user and group creation.</li>
+                            <li>Configured secure sudoers permissions & SSH access.</li>
+                            <li>Reduced administrative tasks, ensuring server consistency.</li>
+                        </ul>
+                        <a href="https://github.com/BagulVirendra07/Infrastructure-User-Provisioning-with-Ansible" target="_blank" class="project-github-link">
+                            <i class="fab fa-github"></i> GitHub Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. NeuroAid -->
+                <div class="project-card talentflow-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+                    <div class="project-image">
+                        <img src="img/NeuroAid%20Project%20BG.png" alt="NeuroAid" style="object-fit: cover; object-position: center;" onerror="this.parentElement.innerHTML='<div class=project-img-placeholder><i class=fas fa-brain></i></div>'">
+                        <div class="project-overlay">
+                            <a href="https://github.com/BagulVirendra07/NeuroAid" target="_blank" class="project-link-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Python</span><span>JavaScript</span><span>Cognitive Health</span><span>AI</span>
+                        </div>
+                        <h3>NeuroAid Assistant <span class="featured-badge talentflow-badge">🧠 Health Tech</span></h3>
+                        <p>An AI-powered neurological health application designed to track and assess cognitive health. Features secure local hosting config, structured data logging, and candidate onboarding dashboards.</p>
+                        <a href="https://github.com/BagulVirendra07/NeuroAid" target="_blank" class="project-github-link">
+                            <i class="fab fa-github"></i> GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TERMINAL CLI SECTION ========== -->
+    <section class="terminal-section" id="terminal">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Interactive Demo</span>
+                <h2 class="section-title">DevOps <span class="title-accent">Terminal Shell</span></h2>
+                <p class="section-subtitle">Interact with my live infrastructure simulator to explore my skills and run automation mockups!</p>
+            </div>
+            <div class="terminal-container" data-aos="zoom-in" data-aos-duration="800">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">virendra@devops-lab:~</div>
+                    <div class="terminal-copy-badge"><i class="fas fa-terminal"></i> BASH</div>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-output" id="terminalOutput">
+                        <div class="term-cyan">Welcome to Virendra's DevOps Portfolio Shell v2.0.0 (Linux-like)</div>
+                        <div class="term-gray">System load: 0.12 | Disk usage: 42% | Active Connections: 1</div>
+                        <div class="term-green">Type 'help' to view available commands.</div><br>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="term-prompt">virendra@devops-lab:~$</span>
+                        <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" placeholder="Type a command...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS SECTION ========== -->
+    <section class="certifications" id="certifications">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title">Certifications & <span class="title-accent">Learning Paths</span></h2>
+            </div>
+            <div class="certifications-single-container" style="max-width: 600px; margin: 0 auto; width: 100%;">
+                <div class="cert-card featured" data-aos="fade-up" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; width: 100%;">
+                    <div class="cert-icon-wrap" style="width: 80px; height: 80px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-award cert-icon" style="color: #a855f7; font-size: 3rem;"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3 style="font-size: 1.35rem; margin-bottom: 4px;">DevOps & Cloud Engineering Internship</h3>
+                        <p class="cert-issuer" style="margin-bottom: 12px; color: var(--accent-light); font-weight: 600; text-transform: uppercase;">Lavatech Technology</p>
+                        <p class="cert-desc" style="font-size: 0.92rem; max-width: 500px; line-height: 1.6; color: var(--text-secondary);">
+                            Successfully completed hands-on DevOps & Cloud administration industrial training. Gained robust experience in automating server configuration using Ansible, deploying EC2 workloads, provisioning storage systems, and managing Linux architectures.
+                        </p>
+                        <span class="cert-status progress" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); color: var(--green); padding: 6px 16px; font-size: 0.8rem; border-radius: 100px; display: inline-block;">Internship Verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Let's Connect</span>
+                <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+                <p class="section-subtitle">Open to DevOps, Cloud &amp; Linux roles. Let's build something resilient together.
+                </p>
+            </div>
+
+            <!-- Availability Badge -->
+            <div class="availability-banner" data-aos="fade-up" data-aos-delay="100">
+                <span class="avail-dot"></span>
+                <span>Available for DevOps / Cloud / SRE Internships &amp; Full-time Roles</span>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left: Info Panel -->
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="900">
+                    <p class="contact-intro">I am passionate about <strong>automating infrastructure</strong> and <strong>building resilient cloud systems</strong>. Whether you have a role, project, or just want to talk DevOps — I respond within <strong>24 hours</strong>.</p>
+
+                    <!-- Contact Info Cards (click to copy) -->
+                    <div class="contact-item copyable" data-copy="Pune, Maharashtra, India"
+                        title="Click to copy location">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Location</h4>
+                            <p>Pune, Maharashtra, India</p>
+                        </div>
+                        <span class="copy-hint"><i class="fas fa-copy"></i></span>
+                    </div>
+
+                    <div class="contact-item copyable" data-copy="+917387487754" title="Click to copy phone number">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+917387487754">+91 73874 87754</a></p>
+                        </div>
+                        <span class="copy-hint"><i class="fas fa-copy"></i></span>
+                    </div>
+
+                    <div class="contact-item copyable" data-copy="virendrabagul7@gmail.com" title="Click to copy email">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Email</h4>
+                            <p><a href="mailto:virendrabagul7@gmail.com">virendrabagul7@gmail.com</a></p>
+                        </div>
+                        <span class="copy-hint"><i class="fas fa-copy"></i></span>
+                    </div>
+
+                    <!-- WhatsApp quick button -->
+                    <a href="https://wa.me/917387487754?text=Hi%20Virendra!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect."
+                        target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Chat on WhatsApp</span>
+                        <i class="fas fa-arrow-right whatsapp-arrow"></i>
+                    </a>
+
+                    <!-- Social Links -->
+                    <div class="contact-socials">
+                        <h4>Connect With Me</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/virendra-bagul-141786250" target="_blank"
+                                class="social-btn linkedin">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/BagulVirendra07" target="_blank" class="social-btn github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="contact-form-wrap" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                    <div class="form-header">
+                        <h3>Send a Message <i class="fas fa-paper-plane form-plane-icon"></i></h3>
+                        <p>Fill in the details below and I'll get back to you ASAP.</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <!-- Honeypot spam protection -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <div class="form-row">
+                            <div class="form-group" id="nameGroup">
+                                <label for="cnt-name">
+                                    <i class="fas fa-user label-icon"></i> Full Name <span
+                                        class="required-star">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="cnt-name" name="name" placeholder="e.g. Recruiter Name"
+                                        autocomplete="name" maxlength="60" required>
+                                    <span class="input-status-icon"></span>
+                                </div>
+                                <span class="field-error" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group" id="emailGroup">
+                                <label for="cnt-email">
+                                    <i class="fas fa-at label-icon"></i> Email Address <span
+                                        class="required-star">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="cnt-email" name="email" placeholder="you@company.com"
+                                        autocomplete="email" required>
+                                    <span class="input-status-icon"></span>
+                                </div>
+                                <span class="field-error" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="subjectGroup">
+                            <label for="cnt-subject">
+                                <i class="fas fa-tag label-icon"></i> Subject
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="text" id="cnt-subject" name="subject" placeholder="DevOps Role / Internship / Collaboration"
+                                    maxlength="100">
+                                <span class="input-status-icon"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="msgGroup">
+                            <label for="cnt-msg">
+                                <i class="fas fa-comment-alt label-icon"></i> Message <span
+                                    class="required-star">*</span>
+                            </label>
+                            <div class="input-wrapper textarea-wrapper">
+                                <textarea id="cnt-msg" name="message" rows="5"
+                                    placeholder="Tell me about the role, project, or opportunity..." maxlength="1000"
+                                    required></textarea>
+                                <span class="char-counter" id="charCounter">0 / 1000</span>
+                            </div>
+                            <span class="field-error" id="msgError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+                            <span class="btn-text">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </span>
+                            <span class="btn-loading" style="display:none;">
+                                <i class="fas fa-circle-notch fa-spin"></i> Sending...
+                            </span>
+                        </button>
+
+                        <p class="form-note">
+                            <i class="fas fa-shield-alt"></i> Your information is safe and will never be shared.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">V<span>Bagul</span></div>
+            <p class="footer-tagline">Automating infrastructure. Securing systems. Scaling the cloud. 🚀</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/virendra-bagul-141786250" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BagulVirendra07" target="_blank"><i class="fab fa-github"></i></a>
+
+                <a href="mailto:virendrabagul7@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">
+                Designed & Built by <a href="https://www.linkedin.com/in/virendra-bagul-141786250"
+                    target="_blank">Virendra Bagul</a> &copy; <span id="footerYear"></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
